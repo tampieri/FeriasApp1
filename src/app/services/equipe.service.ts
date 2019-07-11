@@ -11,12 +11,9 @@ export class EquipeService {
 
   constructor(public http: HttpClient) { }
 
-  getEquipes() : string[] {
-    return  ['dev', 'prod', 'test'];
-  }
 
-  findAll() : Observable<EquipeDTO[]>  {
-    return this.http.get<EquipeDTO[]>(`${API_CONFIG.baseUrl}/equipes`);
+  findAll() {
+    return this.http.get<EquipeDTO[]>(`${API_CONFIG.baseUrl}/equipes/`);
   }
   
 }

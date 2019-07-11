@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { EquipeService } from '../../services/equipe.service';
+import { HttpClientModule } from "@angular/common/http";
 
 @Component({
   selector: 'app-equipe',
@@ -9,21 +10,17 @@ import { EquipeService } from '../../services/equipe.service';
 })
 export class EquipeComponent implements OnInit {
 
-  constructor(equipeService:EquipeService) {
-    this.equipes.findAll()
-    .subscribe(response =>{
-      console.log(response);
-    },
-    error => {
-      console.log(error);
-    });
-  }   
+  equipes: Array<any>;
+
+  constructor(private equipeService : EquipeService) { }   
 
   ngOnInit() {
+    this.findAll();
   }
 
   nomeMetodo = 'Equipe';
 
-  equipes;
-
+  findAll(){
+      this.equipeService.findAll().subscribe(dados => this.equipes = dados);
+  }
 }
