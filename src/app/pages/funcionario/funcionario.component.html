@@ -1,0 +1,22 @@
+<div>
+    <h3 >{{ listaFuncionario }}</h3>
+    <ul>
+      <li *ngFor="let funcionario of funcionarios" >
+        {{funcionario.matricula}} - {{funcionario.nome}}
+      </li>
+    </ul>
+    <form>
+      <div class="form-group"> 
+          <input type="text" class="form-control" placeholder="Digite o nome do funcionario">
+          <label for="">Data Nascimento</label>
+          <input type="date" class="form-control" placeholder="Data Nascimento">
+          <input type="text" class="form-control" placeholder="Digite o endereço">
+          <label for="">Data de contratação</label>
+          <input type="date" class="form-control" placeholder="Data de contratação">
+          <input type="text" class="form-control" placeholder="Arquivo de foto">
+          <input type="text" class="form-control" placeholder="Digite a equipe" autocomplete="equipes">
+          <br>
+          <button type="submit" class="btn btn-primary">Inserir</button>
+      </div>
+    </form>
+  </div>

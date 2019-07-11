@@ -18,9 +18,13 @@ export class EquipeComponent implements OnInit {
     this.findAll();
   }
 
-  nomeMetodo = 'Equipe';
+  listaEquipe = 'Lista de Equipes';
 
   findAll(){
       this.equipeService.findAll().subscribe(dados => this.equipes = dados);
+  }
+
+  insert(){
+    //this.equipeService.findAll().subscribe(dados => this.equipes = dados);
   }
 }

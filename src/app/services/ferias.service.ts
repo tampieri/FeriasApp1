@@ -5,14 +5,13 @@ import { API_CONFIG } from "../../config/api.config";
 @Injectable({
   providedIn: 'root'
 })
-
-export class EquipeService {
+export class FeriasService {
 
   constructor(public http: HttpClient) { }
 
 
   findAll() {
-    return this.http.get<EquipeService[]>(`${API_CONFIG.baseUrl}/equipes/`);
+    return this.http.get<FeriasService[]>(`${API_CONFIG.baseUrl}/ferias/`);
   }
 
   
@@ -24,5 +23,4 @@ export class EquipeService {
       }
     );
   }*/
-   
 }

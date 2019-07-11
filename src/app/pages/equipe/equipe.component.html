@@ -1,7 +1,15 @@
-<h3>{{ nomeMetodo }}</h3>
+<div>
+  <h3 >{{ listaEquipe }}</h3>
   <ul>
     <li *ngFor="let equipe of equipes" >
-      {{equipe.id}} - {{equipe.nome}} teste
+      {{equipe.id}} - {{equipe.nome}}
     </li>
   </ul>
-
+  <form>
+    <div class="form-group"> 
+        <input type="text" class="form-control" placeholder="Digite o nome da equipe">
+        <br>
+        <button type="submit" class="btn btn-primary">Inserir</button>
+    </div>
+  </form>
+</div>

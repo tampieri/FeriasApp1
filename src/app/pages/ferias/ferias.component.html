@@ -1,0 +1,19 @@
+<div>
+    <h3 >{{ listaFerias }}</h3>
+    <ul>
+      <li *ngFor="let ferias of listaFerias" >
+        {{ferias.id}}
+      </li>
+    </ul>
+    <form>
+      <div class="form-group"> 
+          <input type="text" class="form-control" placeholder="Digite o nome do funcionario"/>
+          <label for="">Periodo inicial</label>
+          <input type="date" class="form-control" placeholder="Periodo inicial">
+          <label for="">Periodo final</label>
+          <input type="date" class="form-control" placeholder="Periodo final">
+          <br>
+          <button type="submit" class="btn btn-primary">Inserir</button>
+      </div>
+    </form>
+  </div>
